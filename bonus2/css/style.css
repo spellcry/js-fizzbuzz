@@ -1,0 +1,98 @@
+/* #region Root */
+:root {
+    --green-dark: #083B4C;
+    --green-light: #0CD6A1;
+    --blue-light: #1389B2;
+    --yellow: #FFD166;
+    --red: #F0466F;
+}
+
+/* #endregion Root */
+
+/* #region Regole Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* #endregion Regole Reset */
+
+/* #region Body */
+body {
+    font-family: sans-serif;
+    background-color: var(--green-dark);
+}
+
+/* #endregion Body */
+
+/* #region Container */
+.container {
+    max-width: 1360px;
+    margin-inline: auto;
+    padding: 2rem;
+}
+
+.title {
+    margin-bottom: 1.6rem;
+    font-size: 126px;
+    letter-spacing: -1px;
+    color: #fff;
+    text-align: center;
+}
+
+/* #endregion Container */
+
+/* #region Griglia */
+.griglia {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 40px;
+}
+
+.cella {
+    position: relative;
+    aspect-ratio: 1;
+    transform-style: preserve-3d;
+    transition: transform 800ms linear;
+}
+
+.cella-wrapper:hover .cella {
+    transform: rotateY(180deg);
+}
+
+.front,
+.back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
+    background-color: var(--blue-light);
+}
+
+.front {
+    transform: translateZ(50px);
+}
+
+.back {
+    transform: rotateY(180deg) translateZ(50px);
+}
+
+.multiplo-3 {
+    background-color: var(--green-light);
+}
+
+.multiplo-5 {
+    background-color: var(--yellow);
+}
+
+.multiplo-3.multiplo-5 {
+    background-color: var(--red);
+}
+
+/* #endregion Griglia */
