@@ -1,0 +1,43 @@
+:root {
+    --green-dark: #083B4C;
+    --green-light: #0CD6A1;
+    --blue-light: #1389B2;
+    --yellow: #FFD166;
+    --red: #F0466F;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: var(--green-dark);
+}
+
+.container {
+    max-width: 1360px;
+    margin-inline: auto;
+    padding: 2rem;
+}
+
+.title {
+    font-size: 126px;
+    letter-spacing: -1px;
+    color: #fff;
+    text-align: center;
+}
+
+.griglia {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.cella {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1;
+}
