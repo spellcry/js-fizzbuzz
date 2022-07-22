@@ -1,3 +1,4 @@
+/* #region Root */
 :root {
     --green-dark: #083B4C;
     --green-light: #0CD6A1;
@@ -6,17 +7,26 @@
     --red: #F0466F;
 }
 
+/* #endregion Root */
+
+/* #region Regole Reset */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+/* #endregion Regole Reset */
+
+/* #region Body */
 body {
     font-family: sans-serif;
     background-color: var(--green-dark);
 }
 
+/* #endregion Body */
+
+/* #region Container */
 .container {
     max-width: 1360px;
     margin-inline: auto;
@@ -31,6 +41,9 @@ body {
     text-align: center;
 }
 
+/* #endregion Container */
+
+/* #region Griglia */
 .griglia {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
@@ -56,3 +69,5 @@ body {
 .multiplo-3.multiplo-5 {
     background-color: var(--red);
 }
+
+/* #endregion Griglia */
