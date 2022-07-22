@@ -24,6 +24,7 @@ body {
 }
 
 .title {
+    margin-bottom: 1.6rem;
     font-size: 126px;
     letter-spacing: -1px;
     color: #fff;
@@ -33,6 +34,7 @@ body {
 .griglia {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
+    gap: 40px;
 }
 
 .cella {
@@ -40,4 +42,17 @@ body {
     justify-content: center;
     align-items: center;
     aspect-ratio: 1;
+    background-color: var(--blue-light);
+}
+
+.multiplo-3 {
+    background-color: var(--green-light);
+}
+
+.multiplo-5 {
+    background-color: var(--yellow);
+}
+
+.multiplo-3.multiplo-5 {
+    background-color: var(--red);
 }
